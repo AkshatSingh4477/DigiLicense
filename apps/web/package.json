@@ -10,13 +10,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@digilicense/backend-core": "workspace:*",
+    "@digilicense/db": "workspace:*",
     "@digilicense/ui": "workspace:*",
     "@digilicense/validation": "workspace:*",
     "@hookform/resolvers": "^5.9.1",
     "next": "^16.3.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-hook-form": "^7.85.0"
+    "react-hook-form": "^7.85.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
