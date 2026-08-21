@@ -3,5 +3,10 @@
  * Route Handlers and Server Actions adapt transport concerns to this shape.
  */
 export interface UseCase<TInput, TOutput, TContext = undefined> {
-  execute(input: TInput, context: TContext): Promise<TOutput>;
+  execute(
+    input: TInput,
+    ...context: [TContext] extends [undefined]
+      ? []
+      : [context: TContext]
+  ): Promise<TOutput>;
 }
